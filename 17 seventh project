@@ -1,0 +1,41 @@
+// UPEx17.cpp : Defines the entry point for the console application.
+// game that you have to guess number between 1 and 100
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	int num = 0;
+	cout << "Enter number(1-100):";
+	cin >> num;
+	int br = 0;//a valuable that will count suggestions
+	while (num < 1 || num>100)
+	{
+		num = 0;
+		cout << endl << "Enter number between 1 and 100: ";
+		cin >> num;
+	}
+	int gnum = 0;//the suggestion
+	cout << endl << "Guess the number(1-100): ";
+	cin >> gnum;
+	while (gnum != num)
+	{
+		br++;
+		if (gnum > num)
+		{
+			cout << endl << "DOWN" << endl << "Try again: ";
+			cin >> gnum;
+		}
+		else
+		{
+			cout << endl << "UP" << endl << "Try again: ";
+			cin >> gnum;
+		}
+	}
+	cout << endl << endl << "Congratulations! You guess the number just in " << br << " tries! It is " << gnum << endl << endl;
+    return 0;
+}

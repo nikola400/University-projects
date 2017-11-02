@@ -1,0 +1,24 @@
+// UPEx19.cpp : Defines the entry point for the console application.
+// this program finds one number in row of numbers that is written only once.the others numbers are wiritten twice 
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	unsigned int number = 0, input = 1;
+
+	while (input != 0)
+	{
+		cout << "Enter a positive number: ";
+		cin >> input;
+
+		number ^= input;//bitwise operation that compares bits (0&0 & 1&1)=1 and (0&1 & 1&0)=0 and because each number is written twice number doesn't change
+	}
+
+	cout << "The single number is " << number << endl;
+    return 0;
+}

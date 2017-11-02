@@ -1,0 +1,19 @@
+// UPEx5.cpp : Defines the entry point for the console application.
+// a program that hide first six numbers from a credit number
+
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main()
+{
+	long long crNum = 0; //variable for the credit number
+	cout << "Enter your credit number: ";
+	cin >> crNum;
+	cout << endl << endl << "This is your credit number: ";
+	cout << setfill('X') << setw(16) << crNum%10000 << endl << endl << endl;
+    return 0;
+}

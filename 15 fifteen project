@@ -1,0 +1,30 @@
+// UPEx15.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main()
+{
+	unsigned short num;//our number
+	cout << "Enter your number: ";
+	cin >> num;
+
+	unsigned int pnum = pow(num, 2);//our number on square power
+	unsigned int rnum = 0;//our reverse number
+	int a = 0;
+	while (pnum != 0)
+	{
+		a = pnum % 10;
+		pnum /= 10;
+		rnum = rnum * 10 + a;
+	}
+	cout << endl << "The reverse square power of your number is: " << rnum << endl;
+
+    return 0;
+}

@@ -1,0 +1,46 @@
+// UPEx12.cpp : Defines the entry point for the console application.
+// very simple calculator 
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	double a = 0;//first number
+	double b = 0;//second number
+	double c = 0;//result
+	char sign;//math operation
+	cout << "Enter what you want to count: ";
+	cin >> a >> sign >> b;
+	if ('+' == sign)
+	{
+		c = a + b;
+		cout << endl << a << " + " << b << " = " << c << endl;
+	}
+	if ('-' == sign)
+	{
+		c = a - b;
+		cout << endl << a << " - " << b << " = " << c << endl;
+	}
+	if ('*' == sign)
+	{
+		c = a * b;
+		cout << endl << a << " * " << b << " = " << c << endl;
+	}
+	if ('/' == sign)
+	{
+		if (b != 0)
+		{
+			c = a / b;
+			cout << endl << a << " / " << b << " = " << c << endl;
+		}
+		else
+		{
+			cout << endl << "This division is impossible! " << endl;
+		}
+	}
+    return 0;
+}

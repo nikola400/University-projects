@@ -1,0 +1,38 @@
+// UPEx7.cpp : Defines the entry point for the console application.
+// a program that check which year is leaping
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	int year = 0;
+	cout << "Enter a year: ";
+	cin >> year;
+	if (0 == year % 4 && 0 == year % 100 && 0 == year % 400)
+	{
+		cout << endl << "The year is leaping" << endl;
+	}
+	else
+	{
+		if (0 == year % 4 && 0 == year % 100)
+		{
+			cout << endl << "The year is no leaping" << endl;
+		}
+		else
+		{
+			if (0 == year % 4)
+			{
+				cout << endl << "The year is leaping" << endl;
+			}
+			else
+			{
+				cout << endl << "The year is not leaping" << endl;
+			}
+		}
+	}
+    return 0;
+}

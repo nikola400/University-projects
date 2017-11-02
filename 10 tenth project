@@ -1,0 +1,30 @@
+// UPEx10.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a = 0;//first side of a triangle
+	int b = 0;//second side of a triangle
+	int c = 0;//third side of a triangle
+	cout << "Enter first side of the triangle: ";
+	cin >> a;
+	cout << endl << "Enter second side of the triangle: ";
+	cin >> b;
+	cout << endl << "Enter third side of the triangle: ";
+	cin >> c;
+	if (a + b > c && a + c > b && b + c > a)
+	{
+		cout << endl << "This is triangle";
+	}
+	else
+	{
+		cout << endl << "This is not triangle";
+	}
+
+    return 0;
+}

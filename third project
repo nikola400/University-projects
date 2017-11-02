@@ -1,0 +1,25 @@
+// UPEx3.cpp : Defines the entry point for the console application.
+// a program that compares two numbers 
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	int a = 0; //the first number
+	int b = 0; //the second number
+	cout << "Enter your furst number: ";
+	cin >> a;
+	cout << endl << "Enter your second number: ";
+	cin >> b;
+	bool f;
+	if (a < b)
+		f = true;
+	else
+		f = false;
+	cout << endl << boolalpha << f << endl;
+    return 0;
+}

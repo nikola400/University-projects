@@ -1,0 +1,18 @@
+// UPEx1.cpp : Defines the entry point for the console application.
+//this is the first exercise for my UP class.
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	string name; //the variable for the user's name 
+	cout << "What is your name?" << endl << endl;
+	cout << "My name is: ";
+	cin >> name; 
+	cout << endl << endl << "Hello " << name;
+    return 0;
+}

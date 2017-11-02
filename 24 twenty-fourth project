@@ -1,0 +1,25 @@
+// UPEx24.cpp : Defines the entry point for the console application.
+// this program finds average of row of numbers
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	double av = 0;
+	int a = 0;
+	int br = -1;
+	cout << "Enter numbers: ";
+	do
+	{
+		cin >> a;
+		br++;
+		av += a;
+	} while (a != 0);
+	av /= br;
+	cout << endl << "The average of this numbers is: " << av << endl;
+    return 0;
+}

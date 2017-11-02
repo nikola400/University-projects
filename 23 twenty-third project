@@ -1,0 +1,20 @@
+// UPEx23.cpp : Defines the entry point for the console application.
+// this is exercise to make a table with values of sin(x) and cos(x) when x is between 0 and 1  
+
+#include "stdafx.h"
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	cout << setprecision(3) << fixed;
+	cout << setw(10) << "x" << setw(10) << "Sin(x)" << setw(10) << "Cos(x)" << endl;
+	for (double x = 0; x <= 1; x += 0.1)
+	{
+		cout << setw(10) << x << setw(10) << sin(x) << setw(10) << cos(x) << endl;
+	}
+	return 0;
+}

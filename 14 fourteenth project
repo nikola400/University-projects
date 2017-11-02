@@ -1,0 +1,33 @@
+// UPEx14.cpp : Defines the entry point for the console application.
+// a program that chechs if random string is a palindrome
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+int main()
+{
+	string pal;//our palindrome
+	int a = 0;
+	cout << "Enter palindrome: ";
+	cin >> pal;
+	for (int i = 0; i <= (pal.length()) / 2; i++)
+	{
+		if (pal[i] != pal[pal.length() - 1 - i])
+		{
+			a++;
+		}
+	}
+	if (a == 0)
+	{
+		cout << endl << "This is palindrome!" << endl;
+	}
+	else
+	{
+		cout << endl << "This is not palindrome!" << endl;
+	}
+    return 0;
+}

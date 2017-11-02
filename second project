@@ -1,0 +1,25 @@
+// UPEx2.cpp : Defines the entry point for the console application.
+// a program that output the perimeter and the area of rectangle 
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	double a = 0; //the variable for the first side of the rectangle
+	double b = 0; //the variable for the second side of the rectangle
+	double P = 0; //the variable for the perimeter
+	double S = 0; //the variable for the area
+	cout << "Enter the first side of the rectangle: ";
+	cin >> a;
+	cout << endl << "Enter the second side of the rectangle: ";
+	cin >> b;
+	P = 2 * (a + b);
+	S = a*b;
+	cout << endl << endl << "The perimeter of the rectangle is " << P << endl << endl;
+	cout << "The area of the rectangle is " << S << endl << endl << endl << endl;
+    return 0;
+}

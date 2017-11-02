@@ -1,0 +1,31 @@
+// UPEx4.cpp : Defines the entry point for the console application.
+// a program that output the distance between two points in a coordinate system
+
+#include "stdafx.h"
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+
+int main()
+{
+	double x1 = 0;//x of the first point
+	double y1 = 0;//y of the first point
+	double x2 = 0;//x of the second point
+	double y2 = 0;//y of the second point
+	double dis = 0;//the distance between the two points
+	cout << "Enter x of the first point: ";
+	cin >> x1;
+	cout << endl << "Enter y of the first point: ";
+	cin >> y1;
+	cout << endl << "Enter x of the second point: ";
+	cin >> x2;
+	cout << endl << "Enter y of the second point: ";
+	cin >> y2;
+	dis = sqrt(pow((x2 - x1),2) + pow((y2 - y1),2));
+	double roundedDis = 0;//the rounded distance
+	roundedDis = roundf(dis * 100) / 100;
+	cout << endl << endl << "The distance between two points is: " << roundedDis << endl;
+    return 0;
+}

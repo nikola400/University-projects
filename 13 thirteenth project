@@ -1,0 +1,50 @@
+// UPEx13.cpp : Defines the entry point for the console application.
+// this program makes two two-digit numbers from one four-digit number
+// the first one is made from the first and the fourth digits of the first number
+// the second one is made from the second  and the third digits of the first number 
+// this program compares the two new numbers 
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	int a = 0;//our number
+	int fst = 0;//first digit
+	int s = 0;//second digit
+	int t = 0;//third digit
+	int f = 0;//four digit
+	int b = 0;//our first new number
+	int c = 0;//our second new number
+	cout << "Enter four-digit number :";
+	cin >> a;
+	if (999 < a && 10000 > a)
+	{
+		fst = a / 1000;
+		s = (a%1000) / 100;
+		t = ((a % 1000) % 100) / 10;
+		f = ((a % 1000) % 100) % 10;
+		b = fst * 10 + f;
+		c = s * 10 + t;
+		if (b < c)
+		{
+			cout << endl << "The first new number is less than the second new number" << endl;
+		}
+		if (b == c)
+		{
+			cout << endl << "The first new number is equal to the second new number" << endl;
+		}
+		if (b > c)
+		{
+			cout << endl << "the first new number is greater than the second new number" << endl;
+		}
+	}
+	else
+	{
+		cout << "This is not four-digit number! Please, try again!" << endl;
+	}
+    return 0;
+}

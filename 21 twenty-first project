@@ -1,0 +1,33 @@
+// UPEx21.cpp : Defines the entry point for the console application.
+// this program checks if random number is prime 
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	int a = 0;
+	int br = 0;
+	cout << "Enter number: ";
+	cin >> a;
+	if (a > 0)
+	{
+		for (int i = 2; i <= a / 2; i++)
+		{
+			if (a%i == 0)
+				br++;
+		}
+		if (br == 0)
+			cout << endl << "This is a prime number!" << endl;
+		else
+			cout << endl << "This is not a prime number!" << endl;
+	}
+	else
+	{
+		cout << endl << "This is not a prime number!" << endl;
+	}
+    return 0;
+}
